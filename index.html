@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedBeryl Marketing Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #981b23;
+            --sulphur-beige: #f5ecc2;
+            --bg-beige: #fdfbef;
+            --salmon: #f3d3b5;
+            --black: #000000;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-beige);
+            color: var(--black);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Padding adjusted for notification bar */
+            padding-bottom: 50px; 
+        }
+
+        /* --- NOTIFICATION BAR --- */
+        .notification-bar {
+            width: 100%;
+            background-color: var(--primary-red);
+            color: var(--bg-beige);
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            /* Change 'block' to 'none' to hide it */
+            display: block; 
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--primary-red);
+            margin: 50px 0;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            width: 90%;
+            max-width: 900px;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 25px;
+        }
+
+        .dash-button {
+            background-color: var(--sulphur-beige);
+            border: 1px solid var(--salmon);
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--black);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            text-align: center;
+            padding: 20px;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .dash-button:hover {
+            background-color: var(--primary-red);
+            color: var(--bg-beige);
+            border-color: var(--primary-red);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(152, 27, 35, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+            h1 { font-size: 1.5rem; }
+        }
+
+        @media (max-width: 400px) {
+            .dashboard-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="notification-bar">
+        Important: A complete repository of Creatives is being prepared, will be made available soon.
+    </div>
+
+    <h1>RedBeryl Marketing Dashboard</h1>
+
+    <div class="dashboard-grid">
+        <a href="https://drive.google.com/drive/folders/1_aS3jHxtH9eE8WJXeQ3Zh-moPsjnChg_" class="dash-button">Main Brochures</a>
+        <a href="https://drive.google.com/drive/folders/1RtxqNyLFliCfq1LPIfzvmyWkqBNNV1JI" class="dash-button">City Edits</a>
+        <a href="https://drive.google.com/drive/u/2/folders/1ItncARWKcPh6fR-B5Xt-RqbteG5nPQuX" class="dash-button">Brand Assets</a>
+        <a href="#" class="dash-button">FeedBack / Suggestions Form</a>
+        <a href="#" class="dash-button">Request Creative</a>
+    </div>
+
+</body>
+</html>
