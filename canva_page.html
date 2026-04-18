@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RedBeryl Marketing Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-red: #981b23;
@@ -23,13 +26,13 @@
             flex-direction: column;
             align-items: center;
             /* Padding adjusted for notification bar */
-            padding-bottom: 50px; 
+            padding-bottom: 50px;
         }
 
         /* --- NOTIFICATION BAR --- */
         .notification-bar {
             width: 100%;
-            background-color: var(--primary-red);
+            background-color: var(--black);
             color: var(--bg-beige);
             text-align: center;
             padding: 10px 0;
@@ -37,7 +40,7 @@
             font-weight: 500;
             letter-spacing: 0.5px;
             /* Change 'block' to 'none' to hide it */
-            display: block; 
+            display: block;
         }
 
         h1 {
@@ -54,7 +57,7 @@
             display: grid;
             width: 90%;
             max-width: 900px;
-            grid-template-columns: repeat(3, 1fr); 
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
@@ -74,7 +77,7 @@
             text-align: center;
             padding: 20px;
             border-radius: 2px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
         }
 
         .dash-button:hover {
@@ -86,28 +89,40 @@
         }
 
         @media (max-width: 768px) {
-            .dashboard-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-            h1 { font-size: 1.5rem; }
+            .dashboard-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
         }
 
         @media (max-width: 400px) {
-            .dashboard-grid { grid-template-columns: 1fr; }
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div class="notification-bar">
         Important: See the "How to Use" link before opening the "Canva Link", will be made available soon.
     </div>
 
-    <h1>RedBeryl Marketing Dashboard</h1>
+    <h1>Canva Template</h1>
 
     <div class="dashboard-grid">
         <a href="index.html" class="dash-button">← Back to Dashboard</a>
-        <a href="https://drive.google.com/drive/folders/1_aS3jHxtH9eE8WJXeQ3Zh-moPsjnChg_" class="dash-button">How to Use</a>
-        <a href="https://www.canva.com/design/DAHEw8rqfLc/wRh52q7vupvaLboMkU1CRQ/edit?utm_content=DAHEw8rqfLc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="dash-button">Canva Link</a>     
+        <a href="https://drive.google.com/drive/folders/1_aS3jHxtH9eE8WJXeQ3Zh-moPsjnChg_" class="dash-button">How to
+            Use</a>
+        <a href="https://www.canva.com/design/DAHEw8rqfLc/wRh52q7vupvaLboMkU1CRQ/edit?utm_content=DAHEw8rqfLc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+            class="dash-button">Canva Link</a>
     </div>
 
 </body>
+
 </html>
