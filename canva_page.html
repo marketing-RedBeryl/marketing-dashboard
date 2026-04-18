@@ -4,102 +4,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RedBeryl Marketing Dashboard</title>
+    <title>Canva Template — RedBeryl Marketing</title>
+    <meta name="description"
+        content="RedBeryl Prospect Invite Canva Template — step-by-step guide to personalising and using the template.">
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <style>
         :root {
             --primary-red: #981b23;
+            --primary-red-dark: #7a1219;
+            --primary-red-light: #c0252f;
             --sulphur-beige: #f5ecc2;
             --bg-beige: #fdfbef;
             --salmon: #f3d3b5;
-            --black: #000000;
+            --warm-white: #fffef8;
+            --black: #1a1008;
+            --text-muted: #6b5a4e;
+            --border-color: #e8dfc4;
+            --shadow-sm: 0 2px 8px rgba(152, 27, 35, 0.07);
+            --shadow-md: 0 8px 24px rgba(152, 27, 35, 0.12);
+            --shadow-lg: 0 16px 40px rgba(152, 27, 35, 0.18);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-beige);
+            background-image:
+                radial-gradient(ellipse at 80% 10%, rgba(243, 211, 181, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 90%, rgba(152, 27, 35, 0.05) 0%, transparent 50%);
             color: var(--black);
-            margin: 0;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Padding adjusted for notification bar */
-            padding-bottom: 50px;
         }
 
-        /* --- NOTIFICATION BAR --- */
+        /* ── NOTIFICATION BAR ── */
         .notification-bar {
             width: 100%;
-            background-color: var(--black);
-            color: var(--bg-beige);
+            background: linear-gradient(90deg, #1a1008 0%, #2e1a0e 50%, #1a1008 100%);
+            color: var(--sulphur-beige);
             text-align: center;
-            padding: 10px 0;
-            font-size: 0.9rem;
+            padding: 11px 20px;
+            font-size: 0.82rem;
             font-weight: 500;
-            letter-spacing: 0.5px;
-            /* Change 'block' to 'none' to hide it */
+            letter-spacing: 0.6px;
             display: block;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .notification-bar::before {
+            content: '⚠️ ';
+        }
+
+        /* ── BACK BUTTON ── */
+        .back-nav {
+            width: 90%;
+            max-width: 960px;
+            padding: 20px 0 0;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            transition: all 0.25s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary-red);
+            background: rgba(152, 27, 35, 0.06);
+            border-color: rgba(152, 27, 35, 0.15);
+            gap: 10px;
+        }
+
+        .back-link svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            width: 90%;
+            max-width: 960px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0 36px;
+            text-align: center;
+        }
+
+        .brand-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(152, 27, 35, 0.08);
+            border: 1px solid rgba(152, 27, 35, 0.2);
+            border-radius: 100px;
+            padding: 5px 14px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            margin-bottom: 20px;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
-            font-size: 2rem;
-            color: var(--primary-red);
-            margin: 50px 0;
-            text-align: center;
-            letter-spacing: 1px;
+            font-size: 2.6rem;
+            color: var(--black);
+            line-height: 1.2;
+            letter-spacing: -0.5px;
         }
 
+        h1 span {
+            color: var(--primary-red);
+        }
+
+        .header-sub {
+            margin-top: 12px;
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            max-width: 480px;
+            line-height: 1.6;
+        }
+
+        .header-divider {
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-red), var(--salmon));
+            border-radius: 4px;
+            margin-top: 28px;
+        }
+
+        /* ── STEPS SECTION ── */
+        .steps-label {
+            width: 90%;
+            max-width: 960px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        /* ── GRID ── */
         .dashboard-grid {
             display: grid;
             width: 90%;
-            max-width: 900px;
+            max-width: 960px;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 20px;
+            padding-bottom: 64px;
         }
 
+        /* ── CARD ── */
         .dash-button {
-            background-color: var(--sulphur-beige);
-            border: 1px solid var(--salmon);
+            position: relative;
+            background: var(--warm-white);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
             aspect-ratio: 1 / 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 14px;
             text-decoration: none;
             color: var(--black);
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
             text-align: center;
-            padding: 20px;
-            border-radius: 2px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            padding: 24px 18px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .dash-button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-light) 100%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            border-radius: inherit;
+        }
+
+        /* Back button style — muted/secondary */
+        .dash-button.back-btn::before {
+            background: linear-gradient(135deg, #2e1a0e 0%, #4a2c1a 100%);
+        }
+
+        .dash-button:hover::before {
+            opacity: 1;
         }
 
         .dash-button:hover {
-            background-color: var(--primary-red);
-            color: var(--bg-beige);
+            color: #fff;
             border-color: var(--primary-red);
-            transform: translateY(-8px);
-            box-shadow: 0 12px 20px rgba(152, 27, 35, 0.15);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: var(--shadow-lg);
         }
 
+        .dash-button.back-btn:hover {
+            border-color: #2e1a0e;
+        }
+
+        /* Step badge */
+        .step-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            z-index: 1;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: rgba(152, 27, 35, 0.12);
+            color: var(--primary-red);
+            font-size: 0.65rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.35s ease, color 0.35s ease;
+        }
+
+        .dash-button:hover .step-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .card-icon {
+            position: relative;
+            z-index: 1;
+            width: 54px;
+            height: 54px;
+            background: rgba(152, 27, 35, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            transition: background 0.35s ease, transform 0.35s ease;
+            flex-shrink: 0;
+        }
+
+        .dash-button.back-btn .card-icon {
+            background: rgba(46, 26, 14, 0.08);
+        }
+
+        .dash-button:hover .card-icon {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.1);
+        }
+
+        .card-label {
+            position: relative;
+            z-index: 1;
+            line-height: 1.4;
+        }
+
+        .card-arrow {
+            position: absolute;
+            z-index: 1;
+            bottom: 16px;
+            right: 18px;
+            font-size: 0.8rem;
+            opacity: 0;
+            transform: translate(-4px, 4px);
+            transition: all 0.3s ease;
+        }
+
+        .dash-button:hover .card-arrow {
+            opacity: 0.8;
+            transform: translate(0, 0);
+        }
+
+        /* ── FOOTER ── */
+        .page-footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            margin-top: auto;
+        }
+
+        /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+
             .dashboard-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+                gap: 14px;
             }
 
-            h1 {
-                font-size: 1.5rem;
+            .header {
+                padding: 32px 0 24px;
             }
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 440px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+
             .dashboard-grid {
                 grid-template-columns: 1fr;
             }
@@ -110,18 +352,51 @@
 <body>
 
     <div class="notification-bar">
-        Important: See the "How to Use" link before opening the "Canva Link", will be made available soon.
+        Read the "How to Use" guide before opening the Canva link.
     </div>
 
-    <h1>Canva Template</h1>
+    <nav class="back-nav">
+        <a id="back-link" href="index.html" class="back-link">
+            <svg viewBox="0 0 24 24">
+                <polyline points="15 18 9 12 15 6" />
+            </svg>
+            Back to Dashboard
+        </a>
+    </nav>
+
+    <div class="header">
+        <div class="brand-pill">Prospect Invite</div>
+        <h1>Canva <span>Template</span></h1>
+        <p class="header-sub">Follow the steps below to personalise and share the prospect invite template.</p>
+        <div class="header-divider"></div>
+    </div>
+
+    <p class="steps-label">Quick steps</p>
 
     <div class="dashboard-grid">
-        <a href="index.html" class="dash-button">← Back to Dashboard</a>
-        <a href="https://drive.google.com/drive/folders/1_aS3jHxtH9eE8WJXeQ3Zh-moPsjnChg_" class="dash-button">How to
-            Use</a>
-        <a href="https://www.canva.com/design/DAHEw8rqfLc/wRh52q7vupvaLboMkU1CRQ/edit?utm_content=DAHEw8rqfLc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-            class="dash-button">Canva Link</a>
+
+        <a id="btn-how-to-use" href="https://drive.google.com/drive/folders/1_aS3jHxtH9eE8WJXeQ3Zh-moPsjnChg_"
+            class="dash-button">
+            <div class="step-badge">1</div>
+            <div class="card-icon">📖</div>
+            <span class="card-label">How to Use</span>
+            <span class="card-arrow">↗</span>
+        </a>
+
+        <a id="btn-canva-link"
+            href="https://www.canva.com/design/DAHEw8rqfLc/wRh52q7vupvaLboMkU1CRQ/edit?utm_content=DAHEw8rqfLc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+            class="dash-button">
+            <div class="step-badge">2</div>
+            <div class="card-icon">🎨</div>
+            <span class="card-label">Open Canva Template</span>
+            <span class="card-arrow">↗</span>
+        </a>
+
     </div>
+
+    <footer class="page-footer">
+        © 2026 RedBeryl &nbsp;·&nbsp; Marketing Hub
+    </footer>
 
 </body>
 
