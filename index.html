@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RedBeryl Marketing Dashboard</title>
-    <meta name="description" content="RedBeryl Marketing Dashboard — access brochures, city edits, brand assets, and Canva templates.">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="RedBeryl Marketing Dashboard — access brochures, city edits, brand assets, and Canva templates.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-red: #981b23;
@@ -23,7 +27,9 @@
             --shadow-lg: 0 16px 40px rgba(152, 27, 35, 0.18);
         }
 
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -241,17 +247,32 @@
 
         /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
-            h1 { font-size: 1.9rem; }
-            .dashboard-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-            .header { padding: 32px 0 24px; }
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+
+            .header {
+                padding: 32px 0 24px;
+            }
         }
 
         @media (max-width: 440px) {
-            h1 { font-size: 1.6rem; }
-            .dashboard-grid { grid-template-columns: 1fr; }
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div class="notification-bar">
@@ -269,13 +290,15 @@
 
     <div class="dashboard-grid">
 
-        <a id="btn-brochures" href="https://drive.google.com/drive/folders/1_aS3jHxtH9eE8WJXeQ3Zh-moPsjnChg_" class="dash-button">
+        <a id="btn-brochures" href="https://drive.google.com/drive/folders/1_aS3jHxtH9eE8WJXeQ3Zh-moPsjnChg_"
+            class="dash-button">
             <div class="card-icon">📄</div>
             <span class="card-label">Main Brochures</span>
             <span class="card-arrow">↗</span>
         </a>
 
-        <a id="btn-city-edits" href="https://drive.google.com/drive/folders/1RtxqNyLFliCfq1LPIfzvmyWkqBNNV1JI" class="dash-button">
+        <a id="btn-city-edits" href="https://drive.google.com/drive/folders/1RtxqNyLFliCfq1LPIfzvmyWkqBNNV1JI"
+            class="dash-button">
             <div class="card-icon">🏙️</div>
             <span class="card-label">City Edits</span>
             <span class="card-arrow">↗</span>
@@ -287,13 +310,16 @@
             <span class="card-arrow">→</span>
         </a>
 
-        <a id="btn-brand-assets" href="https://drive.google.com/drive/u/2/folders/1ItncARWKcPh6fR-B5Xt-RqbteG5nPQuX" class="dash-button">
+        <a id="btn-brand-assets" href="https://drive.google.com/drive/u/2/folders/1ItncARWKcPh6fR-B5Xt-RqbteG5nPQuX"
+            class="dash-button">
             <div class="card-icon">🖼️</div>
             <span class="card-label">Brand Assets</span>
             <span class="card-arrow">↗</span>
         </a>
 
-        <a id="btn-feedback" href="#" class="dash-button">
+        <a id="btn-feedback"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfheqfCYdj8a1cMFrLqOVaCBXQhKc8wVvHH5qf7nlpj6d3c5w/viewform?usp=dialog"
+            class="dash-button">
             <div class="card-icon">💬</div>
             <span class="card-label">Feedback &amp; Suggestions</span>
             <span class="card-arrow">→</span>
@@ -312,4 +338,5 @@
     </footer>
 
 </body>
+
 </html>
