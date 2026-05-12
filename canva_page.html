@@ -332,18 +332,135 @@
                 gap: 14px;
             }
 
+            .dash-button {
+                aspect-ratio: auto;
+                min-height: 120px;
+                padding: 20px 14px;
+                gap: 10px;
+            }
+
+            .card-icon {
+                width: 44px;
+                height: 44px;
+                font-size: 1.3rem;
+                border-radius: 10px;
+            }
+
+            .card-label {
+                font-size: 0.85rem;
+            }
+
             .header {
-                padding: 32px 0 24px;
+                padding: 28px 0 20px;
+            }
+
+            .header-sub {
+                font-size: 0.88rem;
+            }
+
+            .header-divider {
+                margin-top: 20px;
             }
         }
 
-        @media (max-width: 440px) {
+        @media (max-width: 480px) {
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
+            }
+
+            .notification-bar {
+                font-size: 0.75rem;
+                padding: 9px 16px;
+            }
+
+            .brand-pill {
+                font-size: 0.65rem;
+                padding: 4px 12px;
+                margin-bottom: 14px;
+            }
+
+            .back-nav {
+                padding: 14px 0 0;
+            }
+
+            .back-link {
+                font-size: 0.8rem;
+                padding: 5px 10px;
+            }
+
+            .header {
+                padding: 18px 0 14px;
+            }
+
+            .header-sub {
+                font-size: 0.82rem;
+                margin-top: 8px;
+            }
+
+            .header-divider {
+                margin-top: 16px;
+                width: 36px;
+            }
+
+            .steps-label {
+                font-size: 0.68rem;
+                margin-bottom: 10px;
             }
 
             .dashboard-grid {
                 grid-template-columns: 1fr;
+                gap: 10px;
+                padding-bottom: 40px;
+            }
+
+            .dash-button {
+                aspect-ratio: auto;
+                flex-direction: row;
+                justify-content: flex-start;
+                min-height: auto;
+                padding: 16px 18px 16px 48px;
+                gap: 14px;
+                border-radius: 12px;
+            }
+
+            .dash-button:hover {
+                transform: translateY(-2px) scale(1);
+            }
+
+            .step-badge {
+                top: 50%;
+                left: 14px;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                font-size: 0.6rem;
+            }
+
+            .card-icon {
+                width: 42px;
+                height: 42px;
+                font-size: 1.2rem;
+                border-radius: 10px;
+                flex-shrink: 0;
+            }
+
+            .card-label {
+                font-size: 0.85rem;
+                text-align: left;
+            }
+
+            .card-arrow {
+                bottom: auto;
+                right: 14px;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 0.5;
+                font-size: 0.75rem;
+            }
+
+            .dash-button:hover .card-arrow {
+                transform: translateY(-50%);
+                opacity: 0.9;
             }
         }
     </style>
