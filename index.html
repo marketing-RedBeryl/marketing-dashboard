@@ -125,6 +125,70 @@
             margin-top: 28px;
         }
 
+        /* ── HOW TO USE BUTTON ── */
+        .how-to-use-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-light) 100%);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            text-decoration: none;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(152, 27, 35, 0.3);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .how-to-use-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--primary-red-dark) 0%, var(--primary-red) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: inherit;
+        }
+
+        .how-to-use-btn:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 6px 20px rgba(152, 27, 35, 0.4);
+        }
+
+        .how-to-use-btn:hover::before {
+            opacity: 1;
+        }
+
+        .how-to-use-btn .btn-icon,
+        .how-to-use-btn .btn-text,
+        .how-to-use-btn .btn-arrow {
+            position: relative;
+            z-index: 1;
+        }
+
+        .how-to-use-btn .btn-icon {
+            font-size: 1rem;
+        }
+
+        .how-to-use-btn .btn-arrow {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .how-to-use-btn:hover .btn-arrow {
+            transform: translateX(2px);
+            opacity: 1;
+        }
+
         /* ── SECTION LABEL ── */
         .steps-label {
             width: 90%;
@@ -285,6 +349,12 @@
             .header-divider {
                 margin-top: 20px;
             }
+
+            .how-to-use-btn {
+                margin-top: 18px;
+                padding: 9px 20px;
+                font-size: 0.82rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -315,6 +385,13 @@
             .header-divider {
                 margin-top: 16px;
                 width: 36px;
+            }
+
+            .how-to-use-btn {
+                margin-top: 14px;
+                padding: 8px 18px;
+                font-size: 0.8rem;
+                gap: 6px;
             }
 
             .steps-label {
@@ -383,6 +460,11 @@
         <h1>Marketing <span>Dashboard</span></h1>
         <p class="header-sub">All your brand assets and creative tools, in one place.</p>
         <div class="header-divider"></div>
+        <a id="btn-how-to-use" href="https://drive.google.com/drive/folders/1_aS3jHxtH9eE8WJXeQ3Zh-moPsjnChg_" class="how-to-use-btn">
+            <span class="btn-icon">📖</span>
+            <span class="btn-text">How to Use</span>
+            <span class="btn-arrow">↗</span>
+        </a>
     </div>
 
     <p class="steps-label">Quick links</p>
@@ -393,6 +475,13 @@
             class="dash-button">
             <div class="card-icon">📄</div>
             <span class="card-label">RedBeryl Compendium</span>
+            <span class="card-arrow">↗</span>
+        </a>
+
+        <a id="btn-Member-Communications"
+            href="https://drive.google.com/drive/folders/1RtxqNyLFliCfq1LPIfzvmyWkqBNNV1JI" class="dash-button">
+            <div class="card-icon">💬</div>
+            <span class="card-label">Member Communications</span>
             <span class="card-arrow">↗</span>
         </a>
 
